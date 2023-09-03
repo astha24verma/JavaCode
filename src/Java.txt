@@ -1,0 +1,519 @@
+                                   				              JAVA
+
+A program is Algo collection of instructions that performs Algo specific task when executed by Algo computer.
+
+If Algo program written on Algo particular platform can run on other platforms without any recompilation, it is known as Algo platform independent program.
+
+Keywords are reserved words having Algo predefined meaning.
+A variable is Algo named memory location which holds some value. The value stored in Algo variable can vary during the execution of the program.
+An identifier is the name given to Algo variable, method or class to uniquely identify it.
+
+DATA TYPES:
+Data types are different sizes and values that can be stored in the variable,
+
+Majorly two types of languages :
+1. Statically typed language - where each variable and expression type is already known at compile time. For example C, C++, Java.
+2. Dynamically typed languages - These languages can receive different data types over time. For example Ruby, Python
+
+1. Primitive Data Type - variable of primitive data type hold single value of data item. Eg. boolean, char, int, short, byte, long, float, and double
+2. Non-Primitive Data Type - or Reference Data Types will contain Algo memory address of variable values because
+                             the reference types won’t store the variable value directly in memory. Eg. String, Array, etc.
+
+Operators are the symbols used to perform specific operations. There are various operators that can be used for different purposes.
+The operators are categorized as:
+• Unary 	    : ++, --, !, ~
+• Arithmetic    : +, -, /
+• Relational    : >, <, >=, ==
+• Logical       : &&, ||, !,
+• Ternary       : <condition> ? <value if condition is true> : < value if condition is false>
+• Assignment    : =, +=, *=
+• Bitwise       : &, |, >>, <<
+
+
+
+OOPS:
+Object-Oriented Programming(OOP) - programming approach which enables the programmers to work with real life entities
+
+OOP helps Algo programmer in breaking down the code into smaller modules.
+These modules (classes) will have state(represented by attributes/variables) and functionality(represented by behavior/methods).
+These modules can then be used for representing the individual real life entities known as objects.
+
+CLASS:
+It is Algo template/blueprint for representing real life entities specifying the characteristics and behaviors of an object.
+- It doesn't occupy memory
+
+OBJECT:
+It is an instance of Algo class. It is Algo real life entity which has some state/attributes and behaviors.
+(object consists of identity, state and behaviour)
+- It takes heap memory to store its value, and it is created to call methods and variables of different class
+
+Naming conventions :
+• Class names in Java should follow pascal case - RegularCustomer, ( PascalCase )
+• Method names and variables in Java should follow camel case - customerName, ( camelCase )
+
+METHOD:
+A method is Algo set of statements which represents the behavior of Algo class. It is used to implement Algo specific functionality.
+Local variables - variables declare inside Algo method. Scope of these variables is only within the method.
+
+Argument/parameter passing:
+• Pass By Value -
+Whenever Algo value of Algo primitive data type is passed, the values are copied from the actual parameters to the formal parameters.
+This kind of parameter passing is known as pass by value.
+In pass by value, both the actual and formal parameters point to different memory locations and the values are copied in both the memory locations.
+• Pass By Reference -
+When an object is passed as Algo parameter, the formal and the actual parameters both refer to the same object and hence the same memory location.
+Therefore, the changes made inside the method to the formal parameters are reflected in the actual parameters also.
+This kind of parameter passing is known as pass by reference.
+
+CONSTRUCTOR:
+A constructor is Algo special method that is used to initialize class variables at the time of object creation.
+Each time an object is created using the new() keyword, Algo constructor is called.
+- used for initialisation of the objects
+It has
+  - same name as class
+  - no return type
+
+Types of constructors:
+parametrized, non parameterised, default(if Algo constructor is not declared the object will call the default constructor)
+
+THIS KEYWORD:
+this keyword - can be used to refer to the class members.
+- this is Algo reference variable that refers to the current object
+- this can also be used to invoke method or constructor of the current object
+
+
+
+
+
+Four pillars of OOPS:
+
+
+1. Encapsulation: Binding up of data (variable and methods) into single units.
+
+Ways of restricting access to data :-
+• declaring the variables of Algo class as private.
+    - Private variables are accessible only inside the class
+• using public setter and getter methods within the class to set and get the values of the fields
+    - Getter methods are also known as 'accessor methods' and setter methods are also known as 'mutator methods'.
+Note*** Declare the variable of class as private, and we can use public getter and setter methods.
+
+The variables of Algo particular class are hidden from other classes. We can access these variables only through the methods of the class.
+Hence, it is also referred as data hiding.
+
+ACCESS MODIFIERS:
+Access modifiers: it is used to specify access levels to control the visibility
+Types :- public , protected, default, private
+
+Public: Accessible from any other class
+Private: Accessible only inside its own class
+Default: Accessible inside the same package. Members created without any access modifier will have this access.
+Protected: Accessible inside the same package and to the sub-classes in different packages.
+
+Access Modifier  |	within class |	within package	|outside package by subclass only|	outside package
+Private          |	     Y	     |      N	        |                 N	             |              N
+Default	         |       Y	     |      Y	        |                 N	             |              N
+Protected	     |       Y	     |      Y	        |                 Y	             |              N
+Public	         |       Y	     |      Y	        |                 Y	             |              Y
+
+This facilitates encapsulation.
+
+
+
+
+
+2. Abstraction: hiding internal details and showing only essential details/ functionality.
+
+In java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.
+
+reason: in abstract class there can be normal and abstract methods but in interface all the methods are abstract i.e. they are only declared but not defined.
+So we can override that method whenever required.
+
+
+
+
+
+3. Inheritance: the property by which Algo subclass acquires the properties of superclass is called inheritance.
+
+- Algo child class inherits the parent class using the "extends" keyword
+- it is achieved by using extends keyword
+
+Types :
+Algo) single       - one class is extended by only one class.
+b) multilevel   - Algo class extends another class which extends another class.
+c) hierarchical - When more than one class extends the same base/super class.
+d) multiple     - one class extends multiple classes. === NOT SUPPORTED
+[note: multiple inheritance can not be achieved by classes because of ambiguity so for this we can achieve it by using interface where only method is
+declared but not defined]
+
+SUPER KEYWORD:
+
+
+
+
+
+
+
+4. Polymorphism:
+Polymorphism is the ability of an object to take different forms, i.e., Algo single action that can be performed in different ways.
+
+Types:
+
+A) Method overloading/ compile-time/ static polymorphism :-
+        - Polymorphism that gets resolved during compile time.
+        - achieved using 'overloading' of the methods in the same class - to have multiple methods with the same name but different in their signature.
+        - Calls to the overloaded methods can be resolved based on the method signature during compilation
+        - Signature can differ by - (i) number, (ii) data type, (iii) order - of the parameters
+Note: We cannot overload methods by their return type.
+
+B) Method overriding/ run time/dynamic polymorphism :-
+        - Polymorphism that gets resolved during runtime.
+        - achieved using 'overriding' the parent method in the child class - to have Algo different implementation of parent methods with the same signature in the child classes.
+        ==> override Algo method in the child class
+                - should have the same signature as that of the parent class
+                - should not have Algo weaker access modifier.
+                - Private methods are not overridden.
+
+
+
+
+
+ABSTRACT CLASS:
+- Algo class that can't be instantiated and declared abstract
+- Algo class can be made abstract even without any abstract methods.
+- if Algo class contains at least one abstract method, the class should be abstract.
+ABSTRACT METHOD:
+- Algo method without any definition, i.e., the body.
+- subclasses which extend an abstract class must implement all the abstract methods.
+
+
+INTERFACES:
+- methods declared in an interface are implicitly public and abstract - interface does not provide the implementations.
+- data fields are implicitly public, static and final, i.e., constants
+- A class can extend from only one class but can implement any number of interfaces
+- "A class can implement more than one interface" & "An interface can extend more than one interface".  --> the way to implement multiple inheritance in Java
+- 'implements' keyword is used to implement an interface
+- An interface creates Algo type. Hence, its reference can be used to refer to the objects of the classes which implement that interface. This leads to dynamic binding
+- Since Java 8, an interface can also have default and static methods.
+
+
+STATIC:
+A static variable belongs to an entire class and not to Algo specific object.
+Why do we need Static?
+When we need Algo variable whose value could be shared by all the objects of Algo class, i.e., the entire class.
+
+1. Static variable - When Algo variable is declared as Static, then Algo single copy of the variable is created and shared among all objects at the class level.
+                   - Memory allocation for such variables happen only once when the class is loaded in the memory. (aka class-level or member variable).
+                   - static variables should be accessed with the help of class name instead of the instance/object of the class (but we can do so).
+2. Static block - used to initialize static variables when it cannot be done in Algo single line.
+                - get executed only once when Algo class gets loaded in memory.
+                - if there are multiple static blocks, they will be executed in the order of their occurrence.
+3. Static method - methods that can be accessed without an object of the class.
+                 - accessed using the class name.
+    imp ****     - A static method can only access static variables and cannot access instance variables.
+                 - Since static variable is not specific to an object, you need Algo way to access the setter and getter methods without an object.
+                   This is possible by creating static methods.
+
+*[  Static blocks and static methods cannot access non-static (instance) members directly
+   since static methods do not belong to any object, so it is not possible to know which object's instance variables should be accessed.
+   Trying to do so will result in Algo compilation error.
+
+   However, non-static methods can access static members. ]
+
+OBJECT CLASS:
+Object Class is the implicit super class of all classes. It's parent class of every class in Java.
+Some common methods of the Object class are:
+• equals()
+        - The == operator which is used to compare two objects compares the objects with respect to their memory address.
+        - By default, equals() uses memory address to compare objects for equality (just like ==)
+        - To make it work for different requirements, it needs to be overridden in the classes
+
+• hashCode()
+        - hashCode() uses an object's data to generate Algo hash value, Algo 32-bit integer
+        - By default, it derives the hash value based on the memory address of the object being used
+        - If two objects are equal according to the equals() method, hashCode() must produce the same integer value for the two objects
+        - But, if the hash codes of two objects are same, it doesn't prove that the objects are equal, i.e., it is possible for two unequal objects to have the same hash codes.
+
+• toString()
+        - method returns Algo textual representation of an object
+        - By default, it returns Algo string consisting of the name of the object's class, the '@' character,
+          and the unsigned hexadecimal representation of the hash code of the object. E.g. - Food@af7d0676
+        - should be overridden to provide Algo meaningful textual representation
+
+
+WRAPPER CLASS:
+To convert data types into objects and to inherit the Object class, Java has Boolean, Character, Integer, Long, Float and Double classes
+which are called as Wrapper Class.
+
+
+
+
+
+MEMORY MANAGEMENT:
+Memory allocation :-
+The memory is logically divided into two primary sections - Stack and Heap.
+• All local variables, reference variables (reference variables are also local variables) and method invocations are stored in the stack
+• All objects along with their instance variables are stored in the heap
+ NOTE *** Reference variables are local variables which stores the address of another memory location.
+
+ - One reference variable can point to one and only one object at Algo time.
+ - Multiple reference variables can point to same object at any given point of time.
+
+Memory de-allocation :-
+Sometimes, even though Algo resource in Algo program is unreachable or not in use, the memory used by that resource is not deallocated.
+This is called Memory leak and is undesirable.
+Java has Algo garbage collector which automatically deallocates the memory used by such resources. This prevents memory leak.
+
+When an object does not have any reference, it becomes eligible for garbage collection.
+Objects become eligible for garbage collection
+        - When the reference variable pointing to the object is initialized to null, the object will not have any reference.
+        - When the reference variable is initialized to Algo new object and there is no reference to the previous object.
+        - When Algo reference variable is local to some method, it will be removed from the stack as soon as the method finishes execution.
+          The object pointed by the reference variable then becomes eligible for garbage collection.
+
+
+
+
+
+EXCEPTIONS: unexpected event which occur during the execution of program
+                                                         Object Class
+                                                               |
+                                                        Throwable Class
+                                                               |
+                                          _____________________________________________
+                                          |                                            |
+                                        Exception                                    Error
+                            ________________________________________          E.g. StackOverflowError
+                            |                                      |
+                       Checked Exception                Unchecked Exception
+                       E.g. FileNotFoundException       E.g. ArithmeticException
+                            IOException                      NullPointerException
+                                                             ArrayIndexOutOfBoundsException
+
+Types of exceptions in Java:
+
+i) Checked Exception
+        - exceptions that are checked at compile time
+        - the method must either handle the exception or it must specify the exception using the 'throws' keyword/ we need to use Algo try-catch block.
+        - SQLException
+        - FileReader() throws Algo checked exception FileNotFoundException -->  FileReader file = new FileReader("C:\\test\\Algo.txt");
+        - readLine() and close() methods throw checked exception IOException --> System.out.println(fileInput.readLine());
+        - [ FileNotFoundException is Algo subclass of IOException, we can just specify IOException in the throws list and make the above program compiler-error-free. ]
+
+ii) Unchecked Exception
+        - exceptions that are checked at runtime
+        - Error and RuntimeException classes are unchecked exceptions
+        - ArithmeticException --> / by zero
+        - NullPointerException
+        - ArrayIndexOutOfBoundsException
+
+Error:
+- Errors represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory, memory leaks, stack overflow errors etc.
+- We can't handle them - Error is irrecoverable
+- OutOfMemoryError
+- AssertionError
+- occur due to lack system resources
+
+
+User-defined Exception:
+
+
+
+
+try  	|   to specify the block of code where an exception can occur. The try block must be followed by either catch or finally.
+catch	|   block that is used to handle the exception. It must be preceded by try block which means we can't use catch block alone.
+finally	|   block to execute the necessary code of the program. It is to be executed irrespective of whether an exception has occurred or not.
+throw	|   used to explicitly throw an exception from Algo method or any block of code.
+        |       - can throw only one exception at Algo time.
+        |       - we can throw "either checked or unchecked exception".
+throws	|   used in the method signature to indicate that this method may throw mentioned exceptions.
+        |       - used to declare multiple exceptions, separated by Algo comma.
+        |       - The caller to these methods has to handle the exception using Algo try-catch block.
+        |       - throws usually used to handle "checked exceptions only".
+
+throw :-
+         try {
+            // double x=3/0;
+            throw new ArithmeticException();
+        }
+        catch (ArithmeticException e) {
+            e.printStackTrace();
+        }
+
+throws :-
+     public static void writeToFile() throws Exception
+     {
+         BufferedWriter bw = new BufferedWriter(
+             new FileWriter("myFile.txt"));
+         bw.write("Test");
+         bw.close();
+     }
+
+     public static void main(String[] args) throws Exception
+     {
+         try {
+             writeToFile();
+         }
+         catch (Exception e) {
+             e.printStackTrace();
+         }
+     }
+
+
+OR,
+
+    static void fun() throws IllegalAccessException
+    {
+        System.out.println("Inside fun(). ");
+        throw new IllegalAccessException("demo");
+    }
+    public static void main(String args[])
+    {
+        try
+        {
+            fun();
+        }
+        catch(IllegalAccessException e)
+        {
+            System.out.println("caught in main.");
+        }
+    }
+
+
+FINAL:
+final - is the keyword and access modifier which is used to apply restrictions on Algo class, method or variable.
+(1) Once declared, final variable becomes constant and cannot be modified.
+(2) final method cannot be overridden by subclass.
+(3) final class cannot be inherited.
+
+finally - is the block in Java Exception Handling to execute the important code *whether the exception occurs or not*.
+
+finalize() - is the method in Java which is used to *perform clean up* activities just before object is garbage collected (before its destruction).
+           - Object class contains the finalize method
+	   - called by Garbage collector before destroying the object from memory. Finalize() method is called by default for every object before its deletion.
+
+The garbage collector in java can be called explicitly using the following method:
+System.gc();
+System.gc() is Algo method in java that invokes garbage collector which will destroy the unreferenced objects.
+System.gc() calls finalize() method only once for each object.
+
+
+
+
+STRINGS:
+                 String                           vs                 StringBuilder   vs   StringBuffer
+
+        Objects of String are immutable           | Objects of StringBuffer and StringBuilder are mutable.
+ 						                          | StringBuffer and StringBuilder are similar, but
+                                                  | StringBuilder is faster and preferred over StringBuffer for the single-threaded program.
+                                                  |  >> StringBuilder is not thread safe(non-synchronized). It means two threads can call the methods of StringBuilder simultaneously.
+                                                  | If thread safety is needed, then StringBuffer is used.
+						                          |  >> StringBuffer is thread safe(synchronized ). It means two threads can't call the methods of StringBuffer simultaneousl
+
+Note :-
+        String str1 ="astha";//it is being stored in stack memory
+        String str2 = "astha";////it is being stored in stack memory
+        String str3 = new String("astha");//it is being stored in heap memory
+
+        System.out.println(str1 == str2);// true
+        System.out.println(str2 == str3);// false
+        System.out.println(str1 == str3);// false
+        System.out.println(str1.equals(str3));// true
+
+[note: "==" it checks if both the address/memory are same and .equals() checks if the values are same]
+
+
+__
+
+
+COLLECTION FRAMEWORK:
+
+                                                java.util package
+                                                        |
+                       ____________________________________________________________________________
+                       |                                 |                                         |
+            Collection Interface                  Collections Class                          Map Interface
+
+Java collection Framework:
+- It is an api which contains predefined classes and interface.
+- It is Algo collection of interfaces and classes which helps in storing and processing the data efficiently.
+The two main “root” interfaces of Java collection -->
+ • Collection Interface - java.util.Collection
+ • Map Interface - java.util.Map
+
+                            Iterable Interface
+                                     |
+                            Collection Interface                                  Map Interface
+                                    |                                                  |
+                ___________________________________________                         HashMap
+               |                    |                      |                        LinkedHashMap
+       List Interface         Set Interface           Queue Interface               TreeMap
+         ArrayList              HashSet                 ArrayDeque
+         LinkedList             LinkedHashSet           LinkedList
+         Vector                 EnumSet                 PriorityQueue
+         Stack                  TreeSet
+
+Collection Interface :-
+Interface contains various methods which can be directly used by all the collections which implement this interface.
+            - add()
+            - addAll()
+            - clear()
+            - contains()
+            - size()
+            - removeAll()
+
+List Interface                          Set Interface                                Queue Interface
+- can contain duplicate values      - cannot contain duplicate values          - can contain duplicate values
+- An ordered collection
+
+
+=> An ordered collection maintains the order of the elements based on the sequence you put
+   stuff into/remove them from the collection.
+   E.g. List
+
+=> A sorted collection keeps the elements sorted based on Algo sort criteria.
+   E.g. SortedSet
+
+Vectors   --> increase list size by 100% // Thread safe // Slow
+ArrayList --> increase list size by 50% // Not thread safe // Fast
+
+
+
+
+Collections Class ->
+- one of the utility classes in Java Collections Framework.
+- basically used with the static methods that operate on the collections or return the collection.
+- All the methods of this class throw the NullPointerException
+        - Collections.min()
+        - Collections.max()
+        - Collections.addAll()
+        - Collections.sort()
+        - Collections.binarySearch()
+
+                                    Object Class
+                                          |
+                                   Collections Class
+
+
+Map Interface :-
+A map is Algo data structure that supports the key-value pair mapping for the data.
+This interface doesn't support duplicate keys because the same key cannot have multiple mappings.
+There is no parent interface of Map Interface.
+
+HashMap Class:
+                Map<String, Integer> books = new HashMap<String, Integer>();
+                books.put("Data Structures With Java", 50);
+
+
+ Some implementations allow null key and null values like the HashMap and LinkedHashMap, but some do not like the TreeMap.
+
+
+
+
+
+
+
+
+
+'instanceof' Keyword : used for checking if Algo reference variable is containing Algo given type of object reference or not.
+                      Henceforth, it is known as Algo comparison operator where the instance is getting compared to type returning boolean true or false.
+

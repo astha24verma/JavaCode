@@ -1,0 +1,19 @@
+GRAPH
+-----
+A Graph is a non-linear data structure consisting of vertices(or nodes) and edges.
+A Graph is composed of a set of vertices( V ) and a set of edges( E ). The graph is denoted by G(V, E).
+
+Representation of Graphs :
+------------------------
+There are two ways to store a graph:
+  >  Adjacency Matrix
+  >  Adjacency List
+
+Comparison between Adjacency Matrix and Adjacency List :
+
+When the graph contains a large number of edges then it is good to store it as a matrix
+because only some entries in the matrix will be empty.
+An algorithm such as Prim’s and Dijkstra adjacency matrix is used to have less complexity.
+
+BFS DFS
+
