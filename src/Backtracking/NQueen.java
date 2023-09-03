@@ -19,7 +19,7 @@ public class NQueen {
         for (int i = 0; i < n; i++) {
             ans.add(temp);
         }
-        
+
         System.out.println(ans);
 
         solve(0, ans, board, n);
@@ -50,6 +50,7 @@ public class NQueen {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 ans.get(i).set(j, board[i][j]);
+                //ok
             }
         }
     }
