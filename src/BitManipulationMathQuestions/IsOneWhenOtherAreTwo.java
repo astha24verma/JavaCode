@@ -1,4 +1,4 @@
-package com.company.algorithms.bitManipulationMathQuestions;
+package BitManipulationMathQuestions;
 
 // Find which number is not appearing twice in array
 public class IsOneWhenOtherAreTwo {
@@ -7,14 +7,14 @@ public class IsOneWhenOtherAreTwo {
     // Note ==> a ^ b ^ c = b ^ a ^ c      -> order does not matters
 
     public static void main(String[] args) {
-        int[] arr = {2, 3, 4, 1, 2 , 1, 3, 6, 4};
+        int[] arr = {2, 3, 4, 1, 2, 1, 3, 6, 4};
         System.out.println(notTwice(arr));
     }
 
     private static int notTwice(int[] arr) {
         int res = 0;
 
-        for(int n : arr){
+        for (int n : arr) {
             res ^= n;
         }
 

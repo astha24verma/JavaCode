@@ -1,4 +1,4 @@
-package com.company.algorithms.bitManipulationMathQuestions;
+package BitManipulationMathQuestions;
 
 // Find which number is not appearing thrice( odd times - 5 or 7 ) in array
 public class IsOneWhenOtherAreThree {

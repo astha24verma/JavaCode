@@ -1,4 +1,4 @@
-package com.company.algorithms.bitManipulationMathQuestions;
+package BitManipulationMathQuestions;
 
 public class gcdAndLcm {
     public static void main(String[] args) {

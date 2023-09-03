@@ -1,4 +1,4 @@
-package com.company.algorithms.bitManipulationMathQuestions;
+package BitManipulationMathQuestions;
 
 public class GetBit {
     // Find the i-th bit (from right)
